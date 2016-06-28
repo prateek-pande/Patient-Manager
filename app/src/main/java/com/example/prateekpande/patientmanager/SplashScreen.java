@@ -23,14 +23,14 @@ public class SplashScreen extends Activity {
 
             @Override
             public void run() {
-                super.run();
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                 }
             }
         };
-//        thread.start();
+        thread.start();
+        // remove the above code
         loadHomeActivity();
     }
 
