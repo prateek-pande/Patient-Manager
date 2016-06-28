@@ -8,4 +8,22 @@
         <item>Existing Appointments</item>
         <item>Help</item>
     </string-array>
+
+    <!-- New appointment -->
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="gender">Gender</string>
+    <string name="gender1">Male</string>
+    <string name="gender2">Female</string>
+    <string name="regarding">Regarding</string>
+    <string name="clinic">Clinic</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string-array name="clinicLocations">
+        <item>Bhawarkuan</item>
+        <item>Palasia</item>
+        <item>Rajwada</item>
+        <item>Vijay Nagar</item>
+    </string-array>
+
 </resources>

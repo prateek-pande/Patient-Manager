@@ -1,13 +1,109 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.prateekpande.patientmanager.fragment.AddAppointment">
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    tools:context="com.example.prateekpande.patientmanager.fragment.AddAppointment"
+    android:id="@+id/constraintLayout">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="add appointment" />
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextPatientName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/name"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/text_field"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout" />
 
-</FrameLayout>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editTextPatientContact"
+        android:hint="@string/contact"
+        android:textSize="@dimen/text_field"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPatientName"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPatientContact"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout">
+
+        <RadioButton
+            android:text="@string/gender1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender1"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_field"
+            android:checked="true"
+            android:textAlignment="viewStart"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <RadioButton
+            android:text="@string/gender2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender2"
+            android:textSize="@dimen/text_field"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextPatientAge"
+        android:hint="Age"
+        android:textSize="@dimen/text_field"
+        app:layout_constraintLeft_toLeftOf="@+id/radioGroupGender"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerClinic"
+        android:textSize="@dimen/text_field"
+        android:spinnerMode="dialog"
+        android:entries="@array/clinicLocations"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPatientAge"
+        android:layout_marginTop="20dp" />
+
+    <DatePicker
+        android:layout_width="0dp"
+        android:layout_height="212dp"
+        android:id="@+id/datePicker"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextPatientAge"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerClinic"
+        android:layout_marginTop="20dp" />
+
+
+</android.support.constraint.ConstraintLayout>
