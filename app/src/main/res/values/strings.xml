@@ -15,10 +15,12 @@
     <string name="gender">Gender</string>
     <string name="gender1">Male</string>
     <string name="gender2">Female</string>
+    <string name="age">Age</string>
     <string name="regarding">Regarding</string>
     <string name="clinic">Clinic</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
+    <string name="bookAppointment">Book Appointment</string>
     <string-array name="clinicLocations">
         <item>Bhawarkuan</item>
         <item>Palasia</item>

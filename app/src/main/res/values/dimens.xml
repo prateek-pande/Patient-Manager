@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- add appointment -->
-    <dimen name="text_field">22sp</dimen>
-
+    <dimen name="text_field">18sp</dimen>
+    <dimen name="field_spacing">20dp</dimen>
 
 </resources>
